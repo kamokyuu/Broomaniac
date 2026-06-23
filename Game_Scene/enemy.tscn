@@ -1,3 +1,20 @@
 [gd_scene format=3 uid="uid://bbtfduekieg8b"]
 
-[node name="Enemy" type="Area2D" unique_id=2109204700]
+[ext_resource type="Script" uid="uid://0y14x0ofr10d" path="res://Game_Scene/enemy.gd" id="1_gucsd"]
+[ext_resource type="Shader" uid="uid://dkihlwxwbjvtu" path="res://Game_Scene/enemy.tres" id="1_kqtue"]
+[ext_resource type="Texture2D" uid="uid://d2poreamjenmo" path="res://icon.svg" id="2_gucsd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7rfq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dr8m4"]
+shader = ExtResource("1_kqtue")
+
+[node name="Enemy" type="CharacterBody2D" unique_id=135226010]
+script = ExtResource("1_gucsd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1331708099]
+shape = SubResource("RectangleShape2D_a7rfq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=291862521]
+material = SubResource("ShaderMaterial_dr8m4")
+texture = ExtResource("2_gucsd")
