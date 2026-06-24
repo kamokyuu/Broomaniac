@@ -5,13 +5,16 @@
 
 [node name="Main" type="Node2D" unique_id=795860815]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1361313369]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(29.335009, 16.52089)
-
 [node name="Player" parent="." unique_id=933796273 instance=ExtResource("1_c6qhk")]
 position = Vector2(588, 318)
 
 [node name="Enemy" parent="." unique_id=135226010 instance=ExtResource("2_c3e5e")]
 position = Vector2(115, 114)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=261337119]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1361313369]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.335009, 16.52089)

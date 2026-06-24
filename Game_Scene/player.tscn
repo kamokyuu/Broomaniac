@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://w0slvhplp24u" path="res://Game_Scene/player.gd" id="1_3emk0"]
 [ext_resource type="Texture2D" uid="uid://d2poreamjenmo" path="res://icon.svg" id="1_jiuhr"]
+[ext_resource type="PackedScene" uid="uid://b6wu4ftnf7jyb" path="res://Game_Scene/test_weapon.tscn" id="3_wqoc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3emk0"]
 size = Vector2(132, 132)
@@ -14,3 +15,7 @@ texture = ExtResource("1_jiuhr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=967831853]
 shape = SubResource("RectangleShape2D_3emk0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=133538616]
+
+[node name="TestWeapon" parent="." unique_id=171721013 instance=ExtResource("3_wqoc3")]

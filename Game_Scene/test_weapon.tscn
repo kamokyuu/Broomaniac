@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b6wu4ftnf7jyb"]
+
+[ext_resource type="Texture2D" uid="uid://d2poreamjenmo" path="res://icon.svg" id="1_5j1q7"]
+[ext_resource type="Script" uid="uid://btb3kjgxgo417" path="res://Game_Scene/test_weapon.gd" id="1_vtmkj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vtmkj"]
+radius = 502.00897
+
+[node name="TestWeapon" type="Area2D" unique_id=171721013]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_vtmkj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1273799283]
+shape = SubResource("CircleShape2D_vtmkj")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1605397835]
+position = Vector2(40, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D" unique_id=998588975]
+scale = Vector2(0.18940395, 0.17961228)
+texture = ExtResource("1_5j1q7")
+
+[node name="Marker2D" type="Marker2D" parent="Marker2D/Sprite2D" unique_id=108085224]
+position = Vector2(47.517487, 0)
